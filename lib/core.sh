@@ -61,7 +61,7 @@ _configure_ssh() {
         echo "$opt" >> "$SSHD"
     done
 
-    echo "Authorized access only." > /etc/banner
+    echo "Authorized access only" > /etc/banner
     systemctl restart sshd 2>/dev/null || systemctl restart ssh 2>/dev/null || true
     echo "[OK] SSH: порт 2026, AllowUsers sshuser, MaxAuthTries 2, баннер"
 }
